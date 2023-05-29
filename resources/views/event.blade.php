@@ -40,7 +40,7 @@
               <a class="nav-link" href="home"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <span> Profile</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-list-alt" aria-hidden="true"></i><span> Jobs</span></a>
+              <a class="nav-link" href="jobs"><i class="fa fa-list-alt" aria-hidden="true"></i><span> Jobs</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="fa fa-users" aria-hidden="true"></i><span> Forum</span></a>
@@ -49,10 +49,10 @@
               <a class="nav-link" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i><span> Alumni</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span> Events</span></a>
+              <a class="nav-link" href="event"><i class="fa fa-calendar" aria-hidden="true"></i><span> Events</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-building-o" aria-hidden="true"></i><span> Company</span></a>
+              <a class="nav-link" href="companis"><i class="fa fa-building-o" aria-hidden="true"></i><span> Company</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i><span> Message</span></a>
@@ -83,47 +83,93 @@
 
 
     <!-- === HEADER PART START === -->
-    <div class="user_content">
+    <section class="event_list">
         <div class="container">
-
             <div class="row">
                 <div class="col-12">
-                    <div class="d-flex align-items-center justify-content-between details">
-                        <div>
-                            <p>Applicants</p>
-                            <p>10</p>
+                    <div class="event_content">
+                        <div class="head">
+
+                            <h2>Career Development Boot-camp by DevilEye</h2>
+                            <p>Hosted bt Facebook</p>
                         </div>
-                        <div>
-                            <p>Job Type</p>
-                            <p>Full Time</p>
+                        <div class="require">
+                            <p>
+                            Event Type: Online <br>
+                            Platform: Zoom <br>
+                            Date: 05:08:2023
+                            </p>
                         </div>
-                        <div>
-                            <p>Salary</p>
-                            <p>$80 - Mannual</p>
+                        <div class="des">
+                            <h5>Event Description</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                                tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus
+                                sit amet augue nec urna efficitur tincidunt. Vivamus consectetur
+                                aliquam lectus commodo ....</p>
                         </div>
-                        <div>
-                            <a class="btn3">Apply Now</a>
+                        <div class="btns d-flex justify-content-around">
+                            <a href="readmore" class="btn1">Read More</a>
+                            <a href="" class="btn2">Join Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="offer">
-                          <h4>Specialist, IT</h4>
-                          <p>Vacancy: 5</p>
-                          <p>Deadline: 05.06.2023</p>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                            tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus
-                            sit amet augue nec urna efficitur tincidunt. Vivamus consectetur
-                            aliquam lectus commodo viverra.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                            tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus
-                            sit amet augue nec urna efficitur tincidunt. Vivamus consectetur
-                            aliquam lectus commodo viverra.</p>
-                    </div>
-                  </div>
-            </div>
+                    <div class="event_content">
+                        <div class="head">
 
+                            <h2>Networking is life by Palash Roy</h2>
+                            <p>Hosted by US-Bangla</p>
+                        </div>
+                        <div class="require">
+                            <p>
+                            Event Type: Offline <br>
+                            Location: Green University <br>
+                            Date: 05:28:2023
+                            </p>
+                        </div>
+                        <div class="des">
+                            <h5>Event Description</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                                tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus
+                                sit amet augue nec urna efficitur tincidunt. Vivamus consectetur
+                                aliquam lectus commodo ....</p>
+                        </div>
+                        <div class="btns d-flex justify-content-around">
+                            <a href="readmore" class="btn1">Read More</a>
+                            <a href="" class="btn2">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="event_content">
+                        <div class="head">
+
+                            <h2>Career Development Boot-camp by DevilEye</h2>
+                            <p>Hosted bt Facebook</p>
+                        </div>
+                        <div class="require">
+                            <p>
+                            Event Type: Online <br>
+                            Platform: Zoom <br>
+                            Date: 05:08:2023
+                            </p>
+                        </div>
+                        <div class="des">
+                            <h5>Event Description</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                                tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus
+                                sit amet augue nec urna efficitur tincidunt. Vivamus consectetur
+                                aliquam lectus commodo ....</p>
+                        </div>
+                        <div class="btns d-flex justify-content-around">
+                            <a href="readmore" class="btn1">Read More</a>
+                            <a href="" class="btn2">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
     <!-- === HEADER PART END === -->
 
 

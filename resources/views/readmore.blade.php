@@ -87,68 +87,39 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-4">
-                    <div class="content">
-                        <div class="user">
-                            <div class="img mx-auto">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                            </div>
-                            {{-- <h4>{{ Auth::user()->name_id }}</h4> --}}
-                            <h4>Facebook Inc.</h4>
-                            <p>Established Since 2009</p>
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-between details">
+                        <div>
+                            <p>Applicants</p>
+                            <p>10</p>
                         </div>
-                        <div class="user_details">
-                            <p>company@email.com</p>
-                            <p>+8801000000001</p>
+                        <div>
+                            <p>Job Type</p>
+                            <p>Full Time</p>
                         </div>
-                        {{-- <div class="user_skills">
-                            <h4>Skills</h4>
-                            <div class="sname">
-                                <span class="bg-success">HTML</span>
-                                <span class="bg-success">CSS</span>
-                                <span class="bg-success">JAVA</span>
-                                <span class="bg-success">C++</span>
-                            </div>
-                        </div> --}}
-                        <div class="user_lang">
-                            {{-- <h4>Language</h4> --}}
-                            <p>6 jobs available</p>
+                        <div>
+                            <p>Salary</p>
+                            <p>$80 - Mannual</p>
+                        </div>
+                        <div>
+                            <a href="#" class="btn3">Apply Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-8">
-                  <div class="content">
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="offer">
-                              <h4>Specialist, IT</h4>
-                              <p>Vacancy: 5</p>
-                              <p>Deadline: 05.06.2023</p>
-                              <a class="btn1">Read More</a>
-                              <a href="readmore" class="btn2">Apply Now</a>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="offer">
-                              <h4>Specialist, SE</h4>
-                              <p>Vacancy: 5</p>
-                              <p>Deadline: 05.06.2023</p>
-                              <a class="btn1">Read More</a>
-                              <a href="readmore" class="btn2">Apply Now</a>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="offer">
-                              <h4>Specialist, SQA</h4>
-                              <p>Vacancy: 5</p>
-                              <p>Deadline: 05.06.2023</p>
-                              <a class="btn1">Read More</a>
-                              <a href="readmore" class="btn2">Apply Now</a>
-                        </div>
-                      </div>
+                <div class="col-12">
+                    <div class="offer">
+                          <h4>Specialist, IT</h4>
+                          <p>Vacancy: 5</p>
+                          <p>Deadline: 05.06.2023</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                            tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus
+                            sit amet augue nec urna efficitur tincidunt. Vivamus consectetur
+                            aliquam lectus commodo viverra.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                            tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus
+                            sit amet augue nec urna efficitur tincidunt. Vivamus consectetur
+                            aliquam lectus commodo viverra.</p>
                     </div>
                   </div>
-                </div>
             </div>
 
         </div>

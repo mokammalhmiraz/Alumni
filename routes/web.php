@@ -19,8 +19,17 @@ Route::get('/', function () {
 Route::get('company', function () {
     return view('./company');
 });
-Route::get('apply', function () {
-    return view('./apply');
+Route::get('companis', function () {
+    return view('./companis');
+});
+Route::get('jobs', function () {
+    return view('./joblist');
+});
+Route::get('readmore', function () {
+    return view('./readmore');
+});
+Route::get('event', function () {
+    return view('./event');
 });
 
 

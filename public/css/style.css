@@ -237,3 +237,118 @@ h6 {
     padding: 10px 10px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
+
+/*=========================
+
+    Companis AREA CSS
+
+=========================*/
+
+.companis_list{
+    background: #1E1E1E;
+}
+.companis_list .com_head{
+    background: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.companis_list .com_head h2{
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.companis{
+    background: #ffffff;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+.companis p{
+    color: #6E6F6F;
+    font-size: 13px;
+}
+.companis .available{
+    background: #FE4D40;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.companis h5{
+    font-weight: 400;
+    font-size: 22px;
+    color: #000000;
+}
+.companis a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 22px;
+    color: #000000;
+}
+.companis .view{
+    border-top: 1px solid;
+    padding-top: 15px;
+}
+.companis i{
+    font-size: 80px;
+}
+
+/*=========================
+
+    JOBS AREA CSS
+
+=========================*/
+.job_list{
+    background: #1E1E1E;
+}
+.job_content{
+    background: #ffffff;
+    padding: 20px 15px;
+    margin: 20px 0;
+}
+.job_content .head{
+    padding-bottom: 10px;
+}
+.job_content .des p{
+    color: #6E6F6F;
+    font-size: 15px;
+}
+.job_content .btns a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+/*=========================
+
+    EVENT AREA CSS
+
+=========================*/
+.event_list{
+    background: #1E1E1E;
+}
+.event_content{
+    background: #ffffff;
+    padding: 20px 15px;
+    margin: 20px 0;
+}
+.event_content .head{
+    padding-bottom: 10px;
+}
+
+.event_content .head p{
+    padding-bottom: 10px;
+    color: #6E6F6F;
+}
+.event_content .des p{
+    color: #6E6F6F;
+    font-size: 15px;
+}
+.event_content .btns a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 10px;
+}

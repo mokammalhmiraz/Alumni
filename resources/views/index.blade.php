@@ -37,10 +37,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <span> Profile</span></a>
+              <a class="nav-link" href="home"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <span> Profile</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-list-alt" aria-hidden="true"></i><span> Jobs</span></a>
+              <a class="nav-link" href="jobs"><i class="fa fa-list-alt" aria-hidden="true"></i><span> Jobs</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="fa fa-users" aria-hidden="true"></i><span> Forum</span></a>
@@ -49,10 +49,10 @@
               <a class="nav-link" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i><span> Alumni</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span> Events</span></a>
+              <a class="nav-link" href="event"><i class="fa fa-calendar" aria-hidden="true"></i><span> Events</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="company"><i class="fa fa-building-o" aria-hidden="true"></i><span> Company</span></a>
+              <a class="nav-link" href="companis"><i class="fa fa-building-o" aria-hidden="true"></i><span> Company</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i><span> Message</span></a>

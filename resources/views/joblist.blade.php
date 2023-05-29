@@ -83,76 +83,93 @@
 
 
     <!-- === HEADER PART START === -->
-    <div class="user_content">
+    <section class="job_list">
         <div class="container">
-
             <div class="row">
-                <div class="col-4">
-                    <div class="content">
-                        <div class="user">
-                            <div class="img mx-auto">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                            </div>
-                            {{-- <h4>{{ Auth::user()->name_id }}</h4> --}}
-                            <h4>Facebook Inc.</h4>
-                            <p>Established Since 2009</p>
+                <div class="col-12">
+                    <div class="job_content">
+                        <div class="head">
+
+                            <h2>Facebook Inc</h2>
                         </div>
-                        <div class="user_details">
-                            <p>company@email.com</p>
-                            <p>+8801000000001</p>
+                        <div class="require">
+                            <p>
+                            Post Name: Developer <br>
+                            Vacancy: 5 <br>
+                            Deadline: 06.06.2023 <br>
+                            Skills: JS, HTML, CSS, PHP
+                            </p>
                         </div>
-                        {{-- <div class="user_skills">
-                            <h4>Skills</h4>
-                            <div class="sname">
-                                <span class="bg-success">HTML</span>
-                                <span class="bg-success">CSS</span>
-                                <span class="bg-success">JAVA</span>
-                                <span class="bg-success">C++</span>
-                            </div>
-                        </div> --}}
-                        <div class="user_lang">
-                            {{-- <h4>Language</h4> --}}
-                            <p>6 jobs available</p>
+                        <div class="des">
+                            <h5>Job Description</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                                tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus
+                                sit amet augue nec urna efficitur tincidunt. Vivamus consectetur
+                                aliquam lectus commodo ....</p>
+                        </div>
+                        <div class="btns d-flex justify-content-around">
+                            <a href="" class="btn1">Read More</a>
+                            <a href="" class="btn2">Apply Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-8">
-                  <div class="content">
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="offer">
-                              <h4>Specialist, IT</h4>
-                              <p>Vacancy: 5</p>
-                              <p>Deadline: 05.06.2023</p>
-                              <a class="btn1">Read More</a>
-                              <a href="readmore" class="btn2">Apply Now</a>
+                <div class="col-12">
+                    <div class="job_content">
+                        <div class="head">
+
+                            <h2>Facebook Inc</h2>
                         </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="offer">
-                              <h4>Specialist, SE</h4>
-                              <p>Vacancy: 5</p>
-                              <p>Deadline: 05.06.2023</p>
-                              <a class="btn1">Read More</a>
-                              <a href="readmore" class="btn2">Apply Now</a>
+                        <div class="require">
+                            <p>
+                            Post Name: Developer <br>
+                            Vacancy: 5 <br>
+                            Deadline: 06.06.2023 <br>
+                            Skills: JS, HTML, CSS, PHP
+                            </p>
                         </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="offer">
-                              <h4>Specialist, SQA</h4>
-                              <p>Vacancy: 5</p>
-                              <p>Deadline: 05.06.2023</p>
-                              <a class="btn1">Read More</a>
-                              <a href="readmore" class="btn2">Apply Now</a>
+                        <div class="des">
+                            <h5>Job Description</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                                tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus
+                                sit amet augue nec urna efficitur tincidunt. Vivamus consectetur
+                                aliquam lectus commodo ....</p>
                         </div>
-                      </div>
+                        <div class="btns d-flex justify-content-around">
+                            <a href="" class="btn1">Read More</a>
+                            <a href="" class="btn2">Apply Now</a>
+                        </div>
                     </div>
-                  </div>
+                </div>
+                <div class="col-12">
+                    <div class="job_content">
+                        <div class="head">
+
+                            <h2>Facebook Inc</h2>
+                        </div>
+                        <div class="require">
+                            <p>
+                            Post Name: Developer <br>
+                            Vacancy: 5 <br>
+                            Deadline: 06.06.2023 <br>
+                            Skills: JS, HTML, CSS, PHP
+                            </p>
+                        </div>
+                        <div class="des">
+                            <h5>Job Description</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                                tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus
+                                sit amet augue nec urna efficitur tincidunt. Vivamus consectetur
+                                aliquam lectus commodo ....</p>
+                        </div>
+                        <div class="btns d-flex justify-content-around">
+                            <a href="" class="btn1">Read More</a>
+                            <a href="" class="btn2">Apply Now</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
-    </div>
+    </section>
     <!-- === HEADER PART END === -->
 
 

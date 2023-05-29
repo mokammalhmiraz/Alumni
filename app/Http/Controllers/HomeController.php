@@ -29,8 +29,20 @@ class HomeController extends Controller
     {
         return view('company');
     }
-    public function apply()
+    public function companis()
     {
-        return view('apply');
+        return view('companis');
+    }
+    public function readmore()
+    {
+        return view('readmore');
+    }
+    public function jobs()
+    {
+        return view('jobs');
+    }
+    public function event()
+    {
+        return view('event');
     }
 }
