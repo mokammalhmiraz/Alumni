@@ -79,6 +79,26 @@
                                 </div>
 
 
+                                <div class="row mb-3">
+                                    <label for="status" class="col-md-4 col-form-label text-md-end">{{ __('User type') }}</label>
+
+                                    <div class="col-md-6">
+                                        <select name="status" id="status">
+                                            <option value="alumni">Alumni
+                                            </option>
+                                            <option value="0">Company
+                                            </option>
+                                            <option value="student">Student
+                                            </option>
+                                        @error('status')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+
 
                                 <div class="row mb-3">
                                     <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>

@@ -20,9 +20,13 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                @auth
+                @if (Auth::user()->status == 'admin')
+                <a class="navbar-brand" href="dashboard">
+                    {{ __('Admin Panel') }}
                 </a>
+                @endif
+                @endauth
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -30,8 +34,35 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="home">{{ __('Home') }}</a>
+                        </li>
                     </ul>
+
+                    @auth
+                    @if (Auth::user()->status == 'admin')
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="alumni_list">{{ __('Alumni List') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="student_list">{{ __('Student List') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="company_list">{{ __('Company List') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">{{ __('Event List') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">{{ __('Job List') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="request_list">{{ __('Request List') }}</a>
+                        </li>
+                    </ul>
+                    @endif
+                    @endauth
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
@@ -51,7 +82,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->email }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -72,9 +103,24 @@
             </div>
         </nav>
 
+        @auth
+        @if (Auth::user()->status == 'admin')
         <main class="py-4">
-            @yield('content')
+            @yield('admin')
+
         </main>
+        @else
+        <main class="py-4">
+            @yield('guest')
+
+        </main>
+        @endif
+        @endauth
+
     </div>
 </body>
 </html>
+
+
+
+

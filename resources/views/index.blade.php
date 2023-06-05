@@ -29,13 +29,24 @@
 <body>
     <!-- === HEADER PART START === -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Alumni Linked</a>
+        <a class="navbar-brand" href="#">@php
+            if(Auth::user()->status == 1) {echo "Alumni";}
+            elseif (Auth::user()->status == 0) {
+                echo "Company";
+            }
+        @endphp Linked</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
+            @if (Auth::user()->status == 'admin')
+            <li class="nav-item">
+                <a class="nav-link" href="dashboard"><i class="fa fa-lock" aria-hidden="true"></i>{{ _('Admin Dashborad') }}</a>
+            </li>
+            @endif
+
             <li class="nav-item">
               <a class="nav-link" href="home"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <span> Profile</span></a>
             </li>
@@ -57,6 +68,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i><span> Message</span></a>
             </li>
+
             <li class="nav-item">
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -93,7 +105,7 @@
                             <div class="img mx-auto">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                             </div>
-                            <h4>{{ Auth::user()->name_id }}</h4>
+                            <h4>{{ Auth::user()->org_name }}</h4>
                             <p>Dhaka, Bangladesh</p>
                         </div>
                         <div class="user_details">

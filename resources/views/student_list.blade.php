@@ -14,12 +14,29 @@
                             {{ session('status') }}
                         </div>
                     @endif --}}
-                    <p>User name: {{ Auth::user()->name_id }}</p>
-                    <p>User Mode: {{ Auth::user()->org_name }}</p>
-                    <p>User mail: {{ Auth::user()->email }}</p>
-                    <p>User Created at: {{ Auth::user()->created_at }}</p>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">SL</th>
+                            <th scope="col">User Name</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Email</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($users as $user)
+                            <tr>
+                                <th scope="row">{{ $loop->index + 1 }}</th>
+                                <td>{{ $user->name_id }}</td>
+                                <td>{{ $user->org_name }}</td>
+                                <td>{{ $user->email }}</td>
+                              </tr>
+                        @endforeach
 
-                    {{ $user_count }}
+                        </tbody>
+                      </table>
+
+
 
                 </div>
             </div>

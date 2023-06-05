@@ -22,6 +22,7 @@ class User extends Authenticatable
         'org_name',
         'email',
         'password',
+        'status',
     ];
 
     /**

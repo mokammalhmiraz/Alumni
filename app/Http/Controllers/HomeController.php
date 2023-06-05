@@ -39,7 +39,7 @@ class HomeController extends Controller
     }
     public function jobs()
     {
-        return view('jobs');
+        return view('joblist');
     }
     public function event()
     {

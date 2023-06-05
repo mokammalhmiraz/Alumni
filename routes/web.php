@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,23 +18,24 @@ Route::get('/', function () {
     return view('/auth/login');
 });
 
-Route::get('company', function () {
-    return view('./company');
-});
-Route::get('companis', function () {
-    return view('./companis');
-});
-Route::get('jobs', function () {
-    return view('./joblist');
-});
-Route::get('readmore', function () {
-    return view('./readmore');
-});
-Route::get('event', function () {
-    return view('./event');
-});
+Route::get('company', [HomeController::class, 'company']);
+Route::get('companis',  [HomeController::class, 'companis']);
+Route::get('jobs', [HomeController::class, 'jobs']);
+Route::get('readmore', [HomeController::class, 'readmore']);
+Route::get('event', [HomeController::class, 'event']);
+
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get("dashboard", [AdminController::class, 'dashboard']);
+Route::get("alumni_list", [AdminController::class, 'userlist']);
+Route::get("student_list", [AdminController::class, 'studentlist']);
+Route::get("company_list", [AdminController::class, 'companylist']);
+Route::get("request_list", [AdminController::class, 'requestlist']);
+
+Route::get("request_list/delete/{id}", [AdminController::class, 'delete']);
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
