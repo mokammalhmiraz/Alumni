@@ -37,5 +37,6 @@ Route::get("company_list", [AdminController::class, 'companylist']);
 Route::get("request_list", [AdminController::class, 'requestlist']);
 
 Route::get("request_list/delete/{id}", [AdminController::class, 'delete']);
+Route::get("request_list/update/{id}", [AdminController::class, 'update']);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

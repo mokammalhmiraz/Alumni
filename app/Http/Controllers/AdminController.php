@@ -29,6 +29,16 @@ class AdminController extends Controller
         return view('company_list', compact('users'));
     }
     function delete($comp_id){
-        echo $comp_id;
+        User::find($comp_id)->delete();
+        return back();
+    }
+    function update($comp_id){
+        // Orderlist::find($order_id)->update([
+        //     'order_status' => 1
+        // ]);
+        $comp_status= User::find($comp_id);
+        $comp_status->status="company";
+        $comp_status->save();
+        return back();
     }
 }
