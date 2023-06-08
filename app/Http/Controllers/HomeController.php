@@ -29,10 +29,6 @@ class HomeController extends Controller
     {
         return view('company');
     }
-    public function companis()
-    {
-        return view('companis');
-    }
     public function readmore()
     {
         return view('readmore');

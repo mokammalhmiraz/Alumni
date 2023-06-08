@@ -90,6 +90,7 @@
                                             </option>
                                             <option value="student">Student
                                             </option>
+                                        </select>
                                         @error('status')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>

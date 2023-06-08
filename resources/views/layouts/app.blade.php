@@ -62,6 +62,19 @@
                         </li>
                     </ul>
                     @endif
+                    @if (Auth::user()->status == 'company')
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard">{{ __('Dashboard') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">{{ __('Event List') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="job_post">{{ __('Job List') }}</a>
+                        </li>
+                    </ul>
+                    @endif
                     @endauth
 
                     <!-- Right Side Of Navbar -->
@@ -104,7 +117,7 @@
         </nav>
 
         @auth
-        @if (Auth::user()->status == 'admin')
+        @if (Auth::user()->status == 'admin' || 'company')
         <main class="py-4">
             @yield('admin')
 

@@ -28,6 +28,10 @@ class AdminController extends Controller
         $users = User::all()->where('status', '=', 'company');
         return view('company_list', compact('users'));
     }
+    function companis(){
+        $users = User::all()->where('status', '=', 'company');
+        return view('companis', compact('users'));
+    }
     function delete($comp_id){
         User::find($comp_id)->delete();
         return back();

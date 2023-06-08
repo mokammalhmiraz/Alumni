@@ -102,6 +102,10 @@ h6 {
     border: none;
 }
 
+.navbar-nav .dropdown button:focus{
+    outline: 0;
+}
+
 /*=========================
 
     02.HEADER AREA CSS
@@ -198,14 +202,12 @@ h6 {
     background-position: left;
     background-size: contain;
     margin-top: 200px;
-    height: 400px;
 }
 .bg .card.login{
     height: 400px;
     padding-top: 100px;
 }
 .bg .card{
-    height: 400px;
 }
 
 .offer{
@@ -214,6 +216,12 @@ h6 {
     padding: 20px 10px;
 }
 .offer a{
+    border: none;
+    text-decoration: none;
+    padding: 5px;
+    color: #ffffff;
+}
+.offer span{
     border: none;
     text-decoration: none;
     padding: 5px;
