@@ -47,11 +47,24 @@
                           <p>Vacancy: {{ $job->job_seat }}</p>
                           <p>Deadline: {{ $job->apply_date }}</p>
                           <a class="btn1">Read More</a>
-                          @if ($job->apply_date >= $c_date)
-                          <a href="readmore" class="btn2">Apply Now</a>
-                          @else
-                          <span class="btn2">Apply Time Over!</span>
-                          @endif
+
+                        @if ($job->apply_date >= $c_date)
+                            <form method="GET" action="{{ url('apply_job') }}" class="d-inline">
+                                <input type="text" hidden value="{{ $job->id }}" name="job_id">
+                                @if ($jobs_id->applicant_id == Auth::id())
+                                    <a class="btn2">
+                                        Already Applied
+                                    </a>
+                                @else
+                                    <button class="btn2" type="submit">
+                                        Apply Now
+                                    </button>
+                                @endif
+
+                            </form>
+                        @else
+                        <span class="btn2">Apply Time Over!</span>
+                        @endif
                     </div>
                   </div>
                   @endforeach
@@ -64,8 +77,9 @@
 </div>
 
 @endsection
-
 @endauth
+
+
 
 
 

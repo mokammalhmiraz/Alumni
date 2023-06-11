@@ -221,6 +221,15 @@ h6 {
     padding: 5px;
     color: #ffffff;
 }
+.offer a:hover{
+    color: #ffffff;
+}
+.offer button{
+    border: none;
+    text-decoration: none;
+    padding: 5px;
+    color: #ffffff;
+}
 .offer span{
     border: none;
     text-decoration: none;
@@ -295,6 +304,14 @@ h6 {
     font-weight: 400;
     font-size: 22px;
     color: #000000;
+}
+.companis button{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 22px;
+    color: #000000;
+    border: none;
+    background: none;
 }
 .companis .view{
     border-top: 1px solid;

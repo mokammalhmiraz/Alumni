@@ -8,6 +8,11 @@ use App\Models\User;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     function dashboard(){
         $user_count = User::count();
         return view('home', compact('user_count'));
@@ -37,9 +42,6 @@ class AdminController extends Controller
         return back();
     }
     function update($comp_id){
-        // Orderlist::find($order_id)->update([
-        //     'order_status' => 1
-        // ]);
         $comp_status= User::find($comp_id);
         $comp_status->status="company";
         $comp_status->save();

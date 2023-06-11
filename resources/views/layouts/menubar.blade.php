@@ -28,6 +28,7 @@
 <body>
     <!-- === HEADER PART START === -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        @auth
         <a class="navbar-brand" href="#">@php
             if(Auth::user()->status == 1) {echo "Alumni";}
             elseif (Auth::user()->status == 0) {
@@ -101,14 +102,14 @@
                     </div>
                 </div>
             </ul>
+        @endauth
 
 
         </div>
       </nav>
-
-      <main class="">
-          @yield('event')
-      </main>
+    <main class="">
+        @yield('event')
+    </main>
     <main class="">
         @yield('index')
     </main>
@@ -121,6 +122,14 @@
     <main class="">
         @yield('jobs_list')
     </main>
+    <main class="">
+        @yield('readmore')
+    </main>
+    <main class="">
+        @yield('apply_job')
+    </main>
+
+
 
 
           <!-- JQUERY FILE -->

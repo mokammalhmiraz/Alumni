@@ -25,17 +25,13 @@ class HomeController extends Controller
     {
         return view('index');
     }
-    public function company()
-    {
-        return view('company');
-    }
     public function readmore()
     {
         return view('readmore');
     }
     public function jobs()
     {
-        return view('joblist');
+        return view('jobs');
     }
     public function event()
     {

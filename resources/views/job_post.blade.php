@@ -24,6 +24,7 @@
                             <th scope="col">Job Type</th>
                             <th scope="col">Job Seat</th>
                             <th scope="col">Job Details</th>
+                            <th scope="col">Job Salary</th>
                             <th scope="col">Apply Ends</th>
                           </tr>
                         </thead>
@@ -35,6 +36,7 @@
                                 <td>{{ $job->job_type }}</td>
                                 <td>{{ $job->job_seat }}</td>
                                 <td>{{ $job->job_details }}</td>
+                                <td>{{ $job->job_salary }}$</td>
                                 <td>{{ $job->apply_date }}</td>
                                 <td>
                                     <a href="{{ url('request_list/delete') }}/{{ $job->id }}" class="btn btn-danger">Delete</a>
@@ -82,6 +84,10 @@
                         <div class="form-group mb-3">
                             <label >Job Deadline</label>
                             <input type="date" name="date" class="form-control" placeholder="" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label >Job Salary</label>
+                            <input type="number" name="salary" class="form-control" placeholder="" required>
                         </div>
                         <div class="form-group mb-3">
                             <label >Job Details</label>

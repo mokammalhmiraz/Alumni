@@ -24,8 +24,14 @@
                     <div class="available">
                         5 jobs available
                     </div>
+
                     <div class="view">
-                        <a href="{{ url('company/details') }}/{{ $user->id }}">View Profile</a>
+                        <form method="GET" action="{{ url('company') }}">
+                            <input type="text" value="{{ $user->id }}" hidden name="user_id">
+                            <button type="submit">
+                                View Profile
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('job_seat');
             $table->date('apply_date');
             $table->string('job_details', 250);
+            $table->integer('job_salary');
             $table->integer('added_by');
             $table->timestamps();
         });

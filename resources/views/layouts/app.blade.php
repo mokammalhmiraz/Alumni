@@ -55,7 +55,7 @@
                             <a class="nav-link" href="">{{ __('Event List') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">{{ __('Job List') }}</a>
+                            <a class="nav-link" href="job_list">{{ __('Job List') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="request_list">{{ __('Request List') }}</a>

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@auth
+
 @section('admin')
 <div class="container">
     <div class="row justify-content-center">
@@ -44,3 +46,5 @@
     </div>
 </div>
 @endsection
+
+@endauth

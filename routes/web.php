@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\JobApplyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +20,8 @@ Route::get('/', function () {
     return view('/auth/login');
 });
 
-Route::get('company', [HomeController::class, 'company']);
 
 Route::get('jobs', [HomeController::class, 'jobs']);
-Route::get('readmore', [HomeController::class, 'readmore']);
 Route::get('event', [HomeController::class, 'event']);
 
 
@@ -32,7 +31,10 @@ Auth::routes();
 
 Route::get('job_post',  [JobController::class, 'jobpost']);
 Route::post('job_post/insert',  [JobController::class, 'insert']);
-Route::get("company/details/{id}", [JobController::class, 'details']);
+Route::get("company", [JobController::class, 'details']);
+Route::get("apply_job", [JobController::class, 'apply']);
+
+Route::post("apply_job/insert", [JobApplyController::class, 'insert']);
 
 
 Route::get("dashboard", [AdminController::class, 'dashboard']);
