@@ -16,7 +16,7 @@
                             {{ session('status') }}
                         </div>
                     @endif --}}
-                    <table class="table">
+                    <table class="table"  style="table-layout: fixed; width: 100%;">
                         <thead>
                           <tr>
                             <th scope="col">SL</th>
@@ -35,7 +35,7 @@
                                 <td>{{ $job->job_title }}</td>
                                 <td>{{ $job->job_type }}</td>
                                 <td>{{ $job->job_seat }}</td>
-                                <td>{{ $job->job_details }}</td>
+                                <td style="word-wrap: break-word;">{{ $job->job_details }}</td>
                                 <td>{{ $job->job_salary }}$</td>
                                 <td>{{ $job->apply_date }}</td>
                                 <td>
@@ -92,6 +92,9 @@
                         <div class="form-group mb-3">
                             <label >Job Details</label>
                             <textarea class="form-control" name="details" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                            @error('details')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                         <button type="submit" class="btn btn-primary">Add Job</button>
                     </form>

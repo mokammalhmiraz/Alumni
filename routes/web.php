@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('jobs', [HomeController::class, 'jobs']);
+
 Route::get('event', [HomeController::class, 'event']);
 
 
@@ -30,6 +30,7 @@ Auth::routes();
 
 
 Route::get('job_post',  [JobController::class, 'jobpost']);
+Route::get('jobs', [JobController::class, 'jobs']);
 Route::post('job_post/insert',  [JobController::class, 'insert']);
 Route::get("company", [JobController::class, 'details']);
 Route::get("apply_job", [JobController::class, 'apply']);

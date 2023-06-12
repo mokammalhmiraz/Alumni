@@ -24,6 +24,9 @@ class JobController extends Controller
         return view('job_post', compact('job_count', 'jobs'));
     }
     function insert(Request $request){
+        $request->validate([
+            'details' => 'string|min:100',
+        ]);
         Job::insert([
             'added_by' => Auth::id(),
             'job_title' => $request->title,
@@ -54,6 +57,13 @@ class JobController extends Controller
     function apply(Request $request){
         $job_id = $request->job_id;
         return view('apply_job', compact('job_id'));
+    }
+
+    function jobs(){
+        $job_list = Job::all();
+        $jobs = $job_list;
+        $added_by = $job_list[0]->added_by;
+        return view('jobs', compact('jobs','added_by'));
     }
 
 }
