@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('admin')
+@section('company')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('Job List') }}</div>
 
 
 
@@ -26,20 +26,21 @@
                             <th scope="col">Job Details</th>
                             <th scope="col">Job Salary</th>
                             <th scope="col">Apply Ends</th>
+                            <th scope="col">Action</th>
                           </tr>
                         </thead>
                         <tbody>
                         @foreach ($jobs as $job)
                             <tr>
                                 <th scope="row">{{ $loop->index + 1 }}</th>
-                                <td>{{ $job->job_title }}</td>
-                                <td>{{ $job->job_type }}</td>
-                                <td>{{ $job->job_seat }}</td>
-                                <td style="word-wrap: break-word;">{{ $job->job_details }}</td>
-                                <td>{{ $job->job_salary }}$</td>
-                                <td>{{ $job->apply_date }}</td>
+                                <td scope="row">{{ $job->job_title }}</td>
+                                <td scope="row">{{ $job->job_type }}</td>
+                                <td scope="row">{{ $job->job_seat }}</td>
+                                <td scope="row" style="white-space: nowrap; overflow: hidden;">{{ $job->job_details }}</td>
+                                <td scope="row">{{ $job->job_salary }}$</td>
+                                <td scope="row">{{ $job->apply_date }}</td>
                                 <td>
-                                    <a href="{{ url('request_list/delete') }}/{{ $job->id }}" class="btn btn-danger">Delete</a>
+                                    <a href="{{ url('job_list/delete') }}/{{ $job->id }}" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                         @endforeach

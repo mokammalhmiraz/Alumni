@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('applicant_number', 100);
             $table->string('applicant_address', 250);
             $table->string('applicant_photo', 250);
-            $table->string('applicant_about', 250);
+            $table->longText('applicant_about');
             $table->string('applicant_cv', 250);
             $table->timestamps();
         });

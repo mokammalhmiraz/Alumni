@@ -133,6 +133,7 @@ h6 {
     height: 100px;
     border: 1px solid;
     border-radius: 50%;
+    overflow: hidden;
 }
 
 .user .img i {
@@ -238,6 +239,13 @@ h6 {
 }
 .btn1{
     background: #FE4D40;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px;
+    border: none;
+}
+.btn1:hover{
+    color: #ffffff;
 }
 .btn2{
     background: #C7C8C8;
@@ -376,4 +384,49 @@ h6 {
     text-decoration: none;
     color: #ffffff;
     padding: 5px 10px;
+}
+
+
+/*=========================
+
+    FORUM AREA CSS
+
+=========================*/
+
+.forum{
+    background: #666666;
+}
+.post_btn{
+    margin-top: 30px;
+    background: #ffffff;
+}
+.post_btn textarea{
+    background: #C7C8C8;
+    color: #6E6F6F;
+    border: none;
+    border-radius: 50px;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+.forum .single_cmnt{
+    background: #ffffff;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+.forum .comments{
+    background: #ffffff;
+    padding: 10px 20px;
+}
+
+.forum .comment_section{
+    border-top: 1px solid;
+    background: #ffffff;
+    padding: 10px 20px;
 }

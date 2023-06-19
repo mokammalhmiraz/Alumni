@@ -7,87 +7,43 @@
     <section class="event_list">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <div class="event_content">
-                        <div class="head">
+                @foreach ($events as $event)
+                    <div class="col-12">
+                        <div class="event_content">
+                            <div class="head">
+                                <h2>{{ $event->event_title }}</h2>
+                                <p>{{ App\Models\User::find($event->added_by)->org_name }}</p>
+                            </div>
+                            <div class="require">
+                                <p>
+                                Event Type: {{ $event->event_type }} <br>
+                                @if ($event->event_platfrom == 'null')
+                                    Location: {{ $event->event_location }}
+                                @elseif ($event->event_location == 'null')
+                                    Platform: {{ $event->event_platfrom }}
+                                @endif
+                                <br>
+                                Date: {{ $event->event_deadline }}
+                                </p>
+                            </div>
+                            <div class="des">
+                                <h5>Event Description</h5>
+                                <p>{{ $event->event_description }}</p>
+                            </div>
+                            <div class="btns d-flex justify-content-around">
+                                <a href="readmore" class="btn1">Read More</a>
+                                {{-- {{ App\Models\Eventapply::all('event_id')->where('apply_id','=',Auth::id()) }} --}}
 
-                            <h2>Career Development Boot-camp by DevilEye</h2>
-                            <p>Hosted bt Facebook</p>
-                        </div>
-                        <div class="require">
-                            <p>
-                            Event Type: Online <br>
-                            Platform: Zoom <br>
-                            Date: 05:08:2023
-                            </p>
-                        </div>
-                        <div class="des">
-                            <h5>Event Description</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                                tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus
-                                sit amet augue nec urna efficitur tincidunt. Vivamus consectetur
-                                aliquam lectus commodo ....</p>
-                        </div>
-                        <div class="btns d-flex justify-content-around">
-                            <a href="readmore" class="btn1">Read More</a>
-                            <a href="" class="btn2">Join Now</a>
+                                    @if ($apply_id->event_id == $event->id && $apply_id->apply_id == Auth::id())
+                                        <a href="" class="btn2">Already Applied</a>
+                                    @else
+
+                                        <a href="{{ url('event/update') }}/{{ $event->id }}"  class="btn2">Join Now</a>
+                                    @endif
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12">
-                    <div class="event_content">
-                        <div class="head">
-
-                            <h2>Networking is life by Palash Roy</h2>
-                            <p>Hosted by US-Bangla</p>
-                        </div>
-                        <div class="require">
-                            <p>
-                            Event Type: Offline <br>
-                            Location: Green University <br>
-                            Date: 05:28:2023
-                            </p>
-                        </div>
-                        <div class="des">
-                            <h5>Event Description</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                                tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus
-                                sit amet augue nec urna efficitur tincidunt. Vivamus consectetur
-                                aliquam lectus commodo ....</p>
-                        </div>
-                        <div class="btns d-flex justify-content-around">
-                            <a href="readmore" class="btn1">Read More</a>
-                            <a href="" class="btn2">Join Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="event_content">
-                        <div class="head">
-
-                            <h2>Career Development Boot-camp by DevilEye</h2>
-                            <p>Hosted bt Facebook</p>
-                        </div>
-                        <div class="require">
-                            <p>
-                            Event Type: Online <br>
-                            Platform: Zoom <br>
-                            Date: 05:08:2023
-                            </p>
-                        </div>
-                        <div class="des">
-                            <h5>Event Description</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                                tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus
-                                sit amet augue nec urna efficitur tincidunt. Vivamus consectetur
-                                aliquam lectus commodo ....</p>
-                        </div>
-                        <div class="btns d-flex justify-content-around">
-                            <a href="readmore" class="btn1">Read More</a>
-                            <a href="" class="btn2">Join Now</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

@@ -52,10 +52,10 @@
                             <a class="nav-link" href="company_list">{{ __('Company List') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">{{ __('Event List') }}</a>
+                            <a class="nav-link" href="all_events">{{ __('Event List') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="job_list">{{ __('Job List') }}</a>
+                            <a class="nav-link" href="all_jobs">{{ __('Job List') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="request_list">{{ __('Request List') }}</a>
@@ -68,10 +68,13 @@
                             <a class="nav-link" href="dashboard">{{ __('Dashboard') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">{{ __('Event List') }}</a>
+                            <a class="nav-link" href="event_list">{{ __('Event Post') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="job_post">{{ __('Job List') }}</a>
+                            <a class="nav-link" href="event_join_list">{{ __('Event Join List') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="job_post">{{ __('Job Post') }}</a>
                         </li>
                     </ul>
                     @endif
@@ -117,12 +120,36 @@
         </nav>
 
         @auth
-        @if (Auth::user()->status == 'admin' || 'company')
+        @if (Auth::user()->status == 'admin')
         <main class="py-4">
             @yield('admin')
 
         </main>
+        <main class="py-4">
+            @yield('dashboard')
+
+        </main>
+        @elseif (Auth::user()->status == 'company')
+        <main class="py-4">
+            @yield('company')
+
+        </main>
+        <main class="py-4">
+            @yield('dashboard')
+
+        </main>
+        @elseif (Auth::user()->status == 'student')
+        <main class="py-4">
+            @yield('userprofile')
+
+        </main>
+        @elseif (Auth::user()->status == 'alumni')
+        <main class="py-4">
+            @yield('userprofile')
+
+        </main>
         @else
+
         <main class="py-4">
             @yield('guest')
 

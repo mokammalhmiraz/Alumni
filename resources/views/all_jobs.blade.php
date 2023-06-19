@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('All Companies') }}</div>
+                <div class="card-header">{{ __('All Jobs') }}</div>
 
                 <div class="card-body">
                     {{-- @if (session('status'))
@@ -18,19 +18,24 @@
                         <thead>
                           <tr>
                             <th scope="col">SL</th>
-                            <th scope="col">Full Name</th>
-                            <th scope="col">User Name</th>
-                            <th scope="col">Email</th>
+                            <th scope="col">Job title</th>
+                            <th scope="col">Company Name</th>
+                            <th scope="col">Job Type</th>
+                            <th scope="col">Job Salary</th>
                           </tr>
                         </thead>
                         <tbody>
-                            @foreach ($users as $user)
+                        @foreach ($jobs as $job)
                             <tr>
                                 <th scope="row">{{ $loop->index + 1 }}</th>
-                                <td>{{ $user->org_name }}</td>
-                                <td>{{ $user->name_id }}</td>
-                                <td>{{ $user->email }}</td>
-                              </tr>
+                                <td>{{ $job->job_title }}</td>
+                                <td>{{ App\Models\User::find($added_by)->org_name }}</td>
+                                <td>{{ $job->job_type }}</td>
+                                <td>{{ $job->job_salary }}$</td>
+                                <td>
+                                    <a href="{{ url('job_list/delete') }}/{{ $job->id }}" class="btn btn-danger">Delete</a>
+                                </td>
+                            </tr>
                         @endforeach
 
                         </tbody>

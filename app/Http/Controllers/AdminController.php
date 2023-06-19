@@ -41,6 +41,10 @@ class AdminController extends Controller
         User::find($comp_id)->delete();
         return back();
     }
+    function alumni(){
+        $alumnis = User::all()->where('status','=','alumni');
+        return view('alumni', compact('alumnis'));
+    }
     function update($comp_id){
         $comp_status= User::find($comp_id);
         $comp_status->status="company";

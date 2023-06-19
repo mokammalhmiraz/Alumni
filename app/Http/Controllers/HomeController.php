@@ -2,7 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Job;
+use App\Models\Event;
+use App\Models\Eventapply;
+use App\Models\Userinfo;
+use Auth;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -23,7 +31,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $user_id = Userinfo::all()->where('id','=',Auth::id());
+        return view('index', compact('user_id'));
     }
     public function readmore()
     {

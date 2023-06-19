@@ -49,10 +49,10 @@
               <a class="nav-link" href="/jobs"><i class="fa fa-list-alt" aria-hidden="true"></i><span> Jobs</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-users" aria-hidden="true"></i><span> Forum</span></a>
+              <a class="nav-link" href="/forum"><i class="fa fa-users" aria-hidden="true"></i><span> Forum</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i><span> Alumni</span></a>
+              <a class="nav-link" href="/alumni"><i class="fa fa-user-plus" aria-hidden="true"></i><span> Alumni</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/event"><i class="fa fa-calendar" aria-hidden="true"></i><span> Events</span></a>
@@ -91,6 +91,9 @@
                     @if (Auth::user()->status == 'admin' || 'company')
                         <a class="dropdown-item" href="/dashboard">{{ _('Dashborad') }}</a>
                     @endif
+                    @if (Auth::user()->status == 'alumni' || 'student')
+                        <a class="dropdown-item" href="edit">{{ _('Edit Profile') }}</a>
+                    @endif
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">
@@ -127,6 +130,12 @@
     </main>
     <main class="">
         @yield('apply_job')
+    </main>
+    <main class="">
+        @yield('forum')
+    </main>
+    <main class="">
+        @yield('forumview')
     </main>
 
 

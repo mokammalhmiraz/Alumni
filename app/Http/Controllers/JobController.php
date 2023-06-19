@@ -65,5 +65,15 @@ class JobController extends Controller
         $added_by = $job_list[0]->added_by;
         return view('jobs', compact('jobs','added_by'));
     }
+    function all_jobs(){
+        $job_list = Job::all();
+        $jobs = $job_list;
+        $added_by = $job_list[0]->added_by;
+        return view('all_jobs', compact('jobs','added_by'));
+    }
+    function delete($job_id){
+        Job::find($job_id)->delete();
+        return back();
+    }
 
 }
