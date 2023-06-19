@@ -32,9 +32,7 @@
                             </div>
                             <div class="btns d-flex justify-content-around">
                                 <a href="readmore" class="btn1">Read More</a>
-                                {{-- {{ App\Models\Eventapply::all('event_id')->where('apply_id','=',Auth::id()) }} --}}
-
-                                    @if ($apply_id->event_id == $event->id && $apply_id->apply_id == Auth::id())
+                                    @if (App\Models\Eventapply::all()->value('apply_id') == Auth::id())
                                         <a href="" class="btn2">Already Applied</a>
                                     @else
 

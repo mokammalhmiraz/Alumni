@@ -46,12 +46,11 @@ class JobController extends Controller
         $jobs = Job::all()->where('added_by', '=', $request->user_id);
         $user_id =  Auth::id();
         $job_id = Jobapply::all();
-        $jobs_id = $job_id[0];
 
         // echo $apply_list = Jobapply::find(Auth::id())->id;
 
 
-        return view('company', compact('jobs','c_date','comp_id','jobs_id'));
+        return view('company', compact('jobs','c_date','comp_id'));
     }
 
     function apply(Request $request){

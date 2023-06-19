@@ -10,7 +10,7 @@
                 @foreach ($alumnis as $alumni)
                     <div class="col-4">
                         <div class="card mt-5" style="width: 18rem;">
-                            <img class="card-img-top"  alt="Card image cap">
+                            <img class="card-img-top" src="images\uploads\profile\{{ App\Models\Userinfo::where('id',$alumni->id)->value('photo') }}"  alt="Card image cap">
                             <div class="card-body">
                               <h5 class="card-title">{{ $alumni->org_name }}</h5>
                               <p class="card-text">{{ $alumni->email }}</p>

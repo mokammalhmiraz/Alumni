@@ -51,7 +51,9 @@
                         @if ($job->apply_date >= $c_date)
                             <form method="GET" action="{{ url('apply_job') }}" class="d-inline">
                                 <input type="text" hidden value="{{ $job->id }}" name="job_id">
-                                @if ($jobs_id->applicant_id == Auth::id())
+                                {{-- {{ App\Models\Jobapply::where('job_id',$job->id)->value('applicant_id') }}
+                                {{ App\Models\Jobapply::where('job_id','=',$job->id)->value('applicant_id') }} --}}
+                                @if (App\Models\Jobapply::where('job_id',$job->id)->value('applicant_id') == Auth::id())
                                     <a class="btn2">
                                         Already Applied
                                     </a>
