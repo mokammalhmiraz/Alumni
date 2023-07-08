@@ -30,9 +30,12 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         @auth
         <a class="navbar-brand" href="#">@php
-            if(Auth::user()->status == 1) {echo "Alumni";}
-            elseif (Auth::user()->status == 0) {
+            if(Auth::user()->status == 'alumni') {echo "Alumni";}
+            elseif (Auth::user()->status == 0 || Auth::user()->status == 'company' ) {
                 echo "Company";
+            }
+            elseif (Auth::user()->status == 'student'){
+                echo "Studnet";
             }
         @endphp Linked</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
